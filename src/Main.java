@@ -16,6 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
     	 AppointmentManager.loadAppointmentsFromCSV("appointments.csv");
+        UserInitialization userInitialization = new UserInitialization(patientCSV, staffCSV);
+		userInitialization.initializeUsers();
 
     	loadPatientsFromCSV();
         displayLoginMenu();
